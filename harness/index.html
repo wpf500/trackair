@@ -3,13 +3,32 @@
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/fonts.css" />
-        <title></title>
+        <title>Strava for emissions</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHlkTDwf6R7LIuz2kpLGJxnJkDUDOti2M&sensor=false"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js"></script>
     </head>
     <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="/assets/img/logo.png" style="width: 40px" /> trackair
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#activity">Journeys</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-        <!-- Use the same figure elm as NGW -->
-        <figure class="element-interactive interactive"></figure>
+        <div class="container interactive"></div>
 
         <!-- Libs -->
         <script src="curl.js"></script>

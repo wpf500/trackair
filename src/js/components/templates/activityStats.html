@@ -1,0 +1,16 @@
+<h2>
+    NW2 4NS &#8594; E8 6DJ
+    <div class="score score--emissions" data-value="{{Math.floor(emissions/10)}}" data-O3="{{O3}}" data-SO2="{{SO2}}" data-PM10="{{PM10}}" data-PM25="{{PM25}}" data-NO2="{{NO2}}">{{Math.floor(emissions/10)}}</div>
+    <div class="score score--exposure" data-value="{{Math.floor(exposure/10)}}" data-O3="{{O3}}" data-SO2="{{SO2/2}}" data-PM10="{{PM10*3}}" data-PM25="{{PM25*3}}" data-NO2="{{NO2}}">{{Math.floor(exposure/10)}}</div>
+</h2>
+<div id="map"></div>
+<div class="timeline">
+    {{#journey.slice(0, -1)}}
+        <span class="timeline__segment" style="width: {{distance/total*100}}%">
+            <img src="/assets/img/{{m.img}}.png" />
+            <span class="timeline__segment__distance">{{formatDistance(distance)}}</span>
+            <span class="timeline__segment__time">{{formatTime(time)}}</span>
+        </span>
+    {{/journey}}
+</div>
+<div id="chart"></div>

@@ -1,18 +1,22 @@
-import iframeMessenger from 'guardian/iframe-messenger'
 import reqwest from 'reqwest'
-import mainHTML from './text/main.html!text'
+
+import Home from './components/home'
+import Activity from './components/activity'
 
 function init(el, context, config, mediator) {
-    iframeMessenger.enableAutoResize();
+    var activeComponent;
+    var components = {
+        'home': Home,
+        'activity': Activity
+    }
 
-    el.innerHTML = mainHTML
+    function change() {
+        var component = window.location.hash.substring(1);
+        activeComponent = new components[component || 'home'](el);
+    }
 
-	reqwest({
-	    url: 'http://ip.jsontest.com/',
-	    type: 'json',
-	    crossOrigin: true,
-	    success: (resp) => el.querySelector('.test-msg').innerHTML = `Your IP address is ${resp.ip}`
-	});
+    window.addEventListener('hashchange', change);
+    change();
 }
 
 (window.define || System.amdDefine)(function() { return {init: init}; });

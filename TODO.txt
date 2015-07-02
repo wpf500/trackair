@@ -1,0 +1,15 @@
+- groups
+  - management
+  - targets
+
+- rankings
+  - by group
+  - similar journeys
+
+- journeys
+  - enter details
+  - stats
+    - exposure
+    - segment breakdown
+    - suggestions for changes
+    - ranking
