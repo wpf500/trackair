@@ -1,10 +1,7 @@
-Guardian interactive ES6 template
-=================================
+trackair
+========
 
-An interactive template & test harness, set up with commonly used components and example code
-
-Usage
-=====
+Air Quality hack day submission
 
 Setup
 -----
@@ -14,9 +11,6 @@ Development
 -----------
 `grunt`
 
-Production / deployment
------------------------
-`TODO`
 
 Using third party js
 --------------------
@@ -37,10 +31,3 @@ Text/JSON in javascript
 ```
 import someHTML from './text/template.html!text'
 import someJSON from './data/data.json!json'
-```
-
-Test Harness
-============
-
-`index.html` - Stripped down test harness. Includes frontend fonts and curl for loading boot.js.
-`immersive.html` - Immersive-style interactive page pulled from theguardian.com
